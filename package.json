@@ -1,0 +1,22 @@
+{
+  "name": "opelavangard",
+  "version": "1.0.0",
+  "description": "1. npm init\r 2. npm install node-sass\r 3. package.json => scripts => \"dev\": \"node-sass --watch scss -o css\"\r 4. npm run dev",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SErsH69/OpelAvangard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SErsH69/OpelAvangard/issues"
+  },
+  "homepage": "https://github.com/SErsH69/OpelAvangard#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

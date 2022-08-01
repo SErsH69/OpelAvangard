@@ -1,0 +1,123 @@
+body {
+  box-sizing: border-box; }
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  outline: none;
+  scroll-behavior: smooth; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #F7F7F8;
+  height: 100%; }
+
+.ovh {
+  overflow: hidden; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: inherit; }
+
+.content {
+  flex: 1 0 auto; }
+
+.footer {
+  flex: 0 0 auto; }
+
+.center_block {
+  max-width: 1450px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+textarea {
+  resize: none; }
+
+@font-face {
+  font-family: 'onb';
+  src: url(../fonts/OpelNextBold.ttf) format("truetype"); }
+
+.header {
+  padding-top: 19px;
+  padding-bottom: 19px; }
+  .header__in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header__logos {
+    display: flex;
+    align-items: center;
+    text-decoration: none; }
+  .header__logo {
+    display: block;
+    text-decoration: none;
+    margin-right: 45px; }
+  .header__name {
+    font-family: 'onb', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000; }
+  .header__subtit {
+    font-family: 'onb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #888888; }
+  .header__contacts {
+    margin-left: auto;
+    text-align: right; }
+  .header__tel {
+    font-family: 'onb', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000; }
+  .header__addr {
+    font-family: 'onb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #888888; }
+  .header__button {
+    font-family: 'onb', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 14px 18px;
+    position: relative;
+    max-width: 212px;
+    width: 100%;
+    cursor: pointer;
+    margin-left: 68px;
+    transition: all .3s ease-out; }
+    .header__button:before {
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 8px;
+      top: 50%;
+      margin-top: -4px;
+      right: 22px;
+      background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50%/4px no-repeat; }
+    .header__button:hover {
+      background: #000;
+      color: #fff; }
+      .header__button:hover:before {
+        background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50%/4px no-repeat; }
