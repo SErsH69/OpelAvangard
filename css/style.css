@@ -46,8 +46,16 @@ textarea {
   resize: none; }
 
 @font-face {
+  font-family: 'on';
+  src: url(../fonts/OpelNext.otf); }
+
+@font-face {
   font-family: 'onb';
-  src: url(../fonts/OpelNextBold.ttf) format("truetype"); }
+  src: url(../fonts/OpelNextBold.otf); }
+
+@font-face {
+  font-family: 'onl';
+  src: url(../fonts/OpelNextLight.otf); }
 
 .header {
   padding-top: 19px;
@@ -72,7 +80,7 @@ textarea {
     text-transform: uppercase;
     color: #000000; }
   .header__subtit {
-    font-family: 'onb', sans-serif;
+    font-family: 'on', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -88,7 +96,7 @@ textarea {
     text-decoration: none;
     color: #000000; }
   .header__addr {
-    font-family: 'onb', sans-serif;
+    font-family: 'on', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
