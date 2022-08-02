@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opel Авангард</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -23,22 +24,63 @@
                     <a href="tel:78122208368" class="header__tel">+7 (812) 220 83 68</a>
                     <div class="header__addr">г. Санкт-Петербург, Приморский пр., д.54, корп.4, лит.А</div>
                 </div>
-                <div class="header__button">Заказать звонок</div>
-            </div>
-            <div class="site-panel-wrap">
-                <div class="burger-wrap">
-                    <div class="burger-btn"></div>
-                    <div class="burger-body">
+                <div class="header__button feedback">Заказать звонок</div>
+                <div class="site-panel-wrap">
+                    <div class="burger-wrap">
+                        <div class="burger-btn"></div>
                         <div class="burger-close-btn"></div>
+                        <div class="burger-body">
+                            <nav class="burger_menu">
+                                <ul>
+                                    <li><a href="#">Модельный ряд</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main class="content">
-
+            <div class="form_block">
+                <div class="form_block__in center_block">
+                    <div class="form_block__item">
+                        <div class="form_block__title">Авто в кредит за 20 минут</div>
+                        <div class="form_block__text">Хотите купить авто сегодня и получить максимальную <br> скидку на автомобиль без дополнительных усилий?</div>
+                        <form action="" class="form_block__form">
+                            <input type="text" placeholder="Имя">
+                            <input type="tel" placeholder="Телефон">
+                            <button type="submit">Заказать звонок</button>
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="Я согласен с условиями обработки персональных данных">
+                                <label for="color-1">Я согласен с условиями обработки <a href="#">персональных данных</a></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </main>
-        <footer class="footer">
-
+        <footer class="footer center_block">
+            <div class="footer__top">
+                <div class="footer__l-side">
+                    <a href="#" class="footer__logos">
+                        <div class="footer__logo"><img src="img/logo.svg" alt=""></div>
+                        <div class="footer__info">
+                            <div class="footer__name">Авангард</div>
+                            <div class="footer__subtit">Официальный дилер Opel</div>
+                        </div>
+                    </a>
+                    <div class="footer__contacts">
+                        <a href="tel:78122208368" class="footer__tel">+7 (812) 220 83 68</a>
+                        <div class="footer__addr">г. Санкт-Петербург, Приморский пр., д.54, корп.4, лит.А, 09:00 - 21.00</div>
+                    </div>
+                    <div class="footer__button feedback">Заказать звонок</div>
+                </div>
+                <div class="footer__r-side">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A94e1d48bf93a683b530914bdb394901f576c7a2bd5b890d9e9dd781a88845a5e&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="footer__bottom">Вся представленная на сайте информация, касающаяся стоимости автомобилей, аксессуаров* и сервисного обслуживания, носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Для получения подробной информации обращайтесь в наши автосалоны. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления. * Стоимость аксессуаров указана без учета стоимости установки.</div>
         </footer>
     </div>
 </body>
