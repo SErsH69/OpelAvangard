@@ -11,6 +11,10 @@ $(function(){
         }
         if (window.matchMedia("(max-width: 768px)").matches) {
             $('.header__contacts').appendTo($('.burger-body'));
+
+            $('.sl_gal_js').not('.slick-initialized').slick({
+                variableWidth: true
+            })
         }
     });
     $(window).trigger('resize');
@@ -25,6 +29,10 @@ $(function(){
     }
     if (window.matchMedia("(max-width: 768px)").matches) {
         $('.header__contacts').appendTo($('.burger-body'));
+
+        $('.sl_gal_js').not('.slick-initialized').slick({
+            variableWidth: true
+        })
     }
     function burg(){
         var burgerWr = $('.burger-wrap'),
@@ -124,4 +132,9 @@ $(function(){
         slideEl.hide();
         $('.' + this.id).show();
     });
+
+    $('.optin_blocks__title').on('click', function() {
+        $(this).toggleClass('isActive');
+        $(this).parent().toggleClass('isActive');
+    })
 });
