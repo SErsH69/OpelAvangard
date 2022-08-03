@@ -49,4 +49,17 @@ $(function(){
         $('.burger-wrap').removeClass('opened');
         $('html').removeClass('ovf');
     });
+
+    $('.block_prod select').niceSelect();
+
+    
+    $('.block_prod__show div').on('click', function() {
+        $('.block_prod__prod').toggleClass('isActive')
+        $(this).toggleClass('isActive');
+        if ($(this).hasClass('isActive')) {
+            $(this).text('Скрыть');
+        } else {
+            $(this).text('Показать еще');
+        }
+    })
 });
