@@ -52,7 +52,6 @@ $(function(){
 
     $('.block_prod select').niceSelect();
 
-    
     $('.block_prod__show div').on('click', function() {
         $('.block_prod__prod').toggleClass('isActive')
         $(this).toggleClass('isActive');
@@ -61,5 +60,68 @@ $(function(){
         } else {
             $(this).text('Показать еще');
         }
+    });
+
+    $('.feedback').click(function() {
+        $('.form-wrapper').addClass('opened');
+        $('html').addClass('ovf');
+        return false;
+    });
+    $('.form-wrapper .icon-close').click(function() {
+        $('.form-wrapper').removeClass('opened');
+        $('html').removeClass('ovf');
+        return false;
+    });
+    $(document).click( function(event){
+        if( $(event.target).closest('.form-wrapper-inner').length ) 
+          return;
+        $('.form-wrapper').removeClass('opened');
+        $('html').removeClass('ovf');
+        event.stopPropagation();
     })
+    $(document).keydown(function(event){
+        if (event.which == 27) {
+            $('.form-wrapper').removeClass('opened');
+            $('html').removeClass('ovf');
+        }
+    });
+
+    $('.sl_spec_js').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 641,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+
+    var slideEl = $('.review__block');
+    var slideBt = $('.review__btn');
+    $('.review__btn:first-child').addClass('isActive');
+    slideBt.click(function () {
+        slideBt.removeClass('isActive');
+        slideBt.removeClass('isActive');
+        $(this).addClass('isActive');
+        slideEl.hide();
+        $('.' + this.id).show();
+    });
 });
