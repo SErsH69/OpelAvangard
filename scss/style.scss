@@ -1270,8 +1270,12 @@ textarea {
         width: 15px;
         height: 15px;
         cursor: pointer;
+        transition: all .3s ease-out;
         @media all and (max-width: 1023px) {
             top: 36px;
+        }
+        &:hover { 
+            background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.000488281' y='12.7485' width='18.0293' height='3.18164' transform='rotate(-45 0.000488281 12.7485)' fill='%23000000'/%3E%3Crect width='18.0293' height='3.18164' transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 14.9984 12.7485)' fill='%23000000'/%3E%3C/svg%3E%0A") 50% no-repeat;
         }
     }
 }
@@ -1555,3 +1559,221 @@ textarea {
     }
 }
 // tabs_block end
+
+// card_top
+.card_top {
+    display: flex;
+    justify-content: space-between;
+    @media all and (max-width: 1380px) {
+        flex-direction: column;
+    }
+    &__l-side {
+        width: calc(100% - 392px);
+        background: #fff;
+        padding: 40px;
+        @media all and (max-width: 1380px) {
+            width: 100%;
+        }
+    }
+    &__r-side {
+        width: 362px;
+        background: #fff;
+        padding: 35px 40px;
+        padding-bottom: 92px;
+        @media all and (max-width: 1380px) {
+            width: 100%;
+            margin-top: 15px;
+            padding: 25px 20px;
+            padding-bottom: 72px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__txt {
+        @media all and (max-width: 1380px) {
+            width: calc(100% - 282px);
+        }
+        @media all and (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        font-family: 'on', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 31px;
+        color: #000000;
+        @media all and (max-width: 768px) {
+            font-size: 26px;
+        }
+    }
+    &__subtitle {
+        font-family: 'on', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        color: #000000;
+        margin-bottom: 25px;
+        @media all and (max-width: 1380px) {
+            margin-bottom: 0;
+        }
+        @media all and (max-width: 768px) {
+            font-size: 18px;
+        }
+    }
+    &__date {
+        margin-bottom: 20px;
+        @media all and (max-width: 1380px) {
+            width: 282px;
+            margin-bottom: 0;
+        }
+        @media all and (max-width: 768px) {
+            width: 100%;
+        }
+        &.is-countdown {
+            border: 0;
+            background: none;
+        }
+        .countdown-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: -11px;
+            margin-right: -11px;
+            width: calc(100% + 22px);
+        }
+        .countdown-section {
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-left: 5.5px;
+            margin-right: 5.5px;
+        }
+        .countdown-amount {
+            width: 54px;
+            height: 51px;
+            background: #F7FF14;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'on', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            color: #000000;
+            margin: 0 auto;
+            margin-bottom: 6px;
+        }
+        .countdown-period {
+            font-family: 'on', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+    &__form {
+        position: relative;
+        @media all and (max-width: 1380px) {
+            width: 100%;
+            margin-top: 17px;
+        }
+        @media all and (max-width: 1380px) and (min-width: 769px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        input {
+            height: 50px;
+            &[type="text"], &[type="tel"] {
+                background: #FFFFFF;
+                border: 0;
+                border: 1px solid #E5E6E6;
+                padding: 15px 10px;
+                font-family: 'on', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                border-radius: 0;
+                font-size: 16px;
+                color: #000000;
+                width: 100%;
+                margin-bottom: 12px;
+                &::placeholder {
+                    font-family: 'on', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #000000;
+                }
+                @media all and (max-width: 1380px) and (min-width: 769px) {
+                    width: calc(33.3% - 5px);
+                    margin-bottom: 0;
+                }
+                @media all and (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        button {
+            &[type="submit"] {
+                background: transparent;
+                cursor: pointer;
+                font-family: 'on', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                width: 100%;
+                font-size: 16px;
+                color: #FFFFFF;
+                border: 1px solid #000;
+                padding: 14px 18px;
+                background: #000;
+                text-align: left;
+                position: relative;
+                transition: all .3s ease-out;
+                margin-bottom: 19px;
+                &:before {
+                    content: '';
+                    width: 4px;
+                    height: 8px;
+                    background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                    top: 50%;
+                    right: 18px;
+                    position: absolute;
+                    margin-top: -4px;
+                }
+                &:hover {
+                    background: #888888;
+                    border-color: #888888;
+                }
+                @media all and (max-width: 1380px) and (min-width: 769px) {
+                    width: calc(33.3% - 5px);
+                    margin-bottom: 0;
+                }
+                @media all and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+        .custom-checkbox {
+            & + label {
+                &:before {
+                    border-color: #000;
+                }
+            }
+            &:checked + label:before {
+                background-color: #000;
+            }
+        }
+        .checkbox {
+            @media all and (max-width: 1023px) {
+                bottom: -50px !important; 
+                max-width: 300px;
+                width: 100%;
+            }
+        }
+    }
+}
+// card_top end
