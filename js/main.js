@@ -11,7 +11,6 @@ $(function(){
         }
         if (window.matchMedia("(max-width: 768px)").matches) {
             $('.header__contacts').appendTo($('.burger-body'));
-
             $('.sl_gal_js').not('.slick-initialized').slick({
                 variableWidth: true
             })
