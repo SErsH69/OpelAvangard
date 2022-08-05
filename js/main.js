@@ -122,6 +122,37 @@ $(function(){
         ]
     });
 
+    $('.sl_t_js').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true
+    });
+
+    $('.sl_imgs_js').each(function () {
+        var sl2 = $(this).parents('.sl_card').find('.sl_dots_js');
+        $(this).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            swipe: false,
+            asNavFor: sl2
+        });
+    })
+
+
+    $('.sl_dots_js').each(function () {
+        var sl = $(this).parents('.sl_card').find('.sl_imgs_js');
+        $(this).slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            swipe: false,
+            asNavFor: sl,
+            dots: false,
+            focusOnSelect: true
+        });
+    });
+
     var slideEl = $('.review__block');
     var slideBt = $('.review__btn');
     $('.review__btn:first-child').addClass('isActive');

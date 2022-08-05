@@ -1562,9 +1562,17 @@ textarea {
 
 // card_top
 .sl_card {
-    display: flex;
+    display: flex !important;
+    @media all and (max-width: 680px) {
+        flex-direction: column;
+    }
     &__l-side {
-
+        max-width: 410px;
+        width: 100%;
+        position: relative;
+        @media all and (max-width: 1023px) {
+            max-width: 260px;
+        }
     }
     &__stock {
         font-family: 'on', sans-serif;
@@ -1593,7 +1601,16 @@ textarea {
         font-size: 50px;
         line-height: 98.1%;
         color: #000000;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        @media all and (max-width: 1023px) {
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+        @media all and (max-width: 680px) {
+            margin-bottom: 15px;
+            font-size: 26px;
+            margin-top: 5px;
+        }
     }
     &__prc {
         font-family: 'on', sans-serif;
@@ -1608,6 +1625,9 @@ textarea {
             border-radius: 17px;
             padding: 1px 6px;
         }
+        @media all and (max-width: 1023px) {
+            font-size: 12px;
+        }
     }
     &__prc_bl {
         font-family: 'on', sans-serif;
@@ -1615,7 +1635,13 @@ textarea {
         font-weight: 700;
         font-size: 42px;
         color: #000000;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        @media all and (max-width: 1023px) {
+            font-size: 22px;
+        }
+        @media all and (max-width: 680px) {
+            margin-bottom: 12px;
+        }
     }
     &__pref {
         position: relative;
@@ -1628,10 +1654,18 @@ textarea {
         text-transform: uppercase;
         flex-direction: column;
         display: flex;
+        @media all and (max-width: 1023px) {
+            font-size: 15px;
+            padding-left: 33px;
+            margin-bottom: 0;
+        }
         span {
             font-size: 16px;
             color: #888888;
             text-transform: unset;
+            @media all and (max-width: 1023px) {
+                font-size: 11px;
+            }
         }
         &:before {
             position: absolute;
@@ -1642,13 +1676,95 @@ textarea {
             height: 39px;
             margin-top: -19.5px;
             background: url("data:image/svg+xml,%3Csvg width='41' height='38' viewBox='0 0 41 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19' cy='19' r='16.5' stroke='%23F7FF14' stroke-width='5'/%3E%3Cpath d='M14.4395 16.1457L22.1408 24.3204L38.7595 8.36035' stroke='black' stroke-width='5'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            @media all and (max-width: 1023px) {
+                width: 25px;
+                height: 25px;
+                background-size: 100%;
+                margin-top: -12.5px;
+            }
         }
         &:not(:last-child) {
             margin-bottom: 22px;
+            @media all and (max-width: 1023px) {
+                margin-bottom: 15px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            &:nth-child(3) {
+                margin-bottom: 0 !important;
+            }
         }
     }
     &__r-side {
-
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: calc(100% - 410px);
+        @media all and (max-width: 1023px) {
+            width: calc(100% - 260px);
+        }
+    }
+    &__sl_img {
+        margin-top: auto;
+        margin-bottom: auto;
+        position: relative;
+        z-index: 2;
+    }
+    &__options {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;    
+        margin-left: auto;
+        max-width: 350px;
+        width: 100%;
+        @media all and (max-width: 1023px) {
+            max-width: 280px;
+        }
+    }
+    &__option {
+        width: 50%;
+        &:nth-child(1), &:nth-child(2) {
+            margin-bottom: 16px;
+        }
+    }
+    &__opt {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        flex: 0 0 30px;
+        @media all and (max-width: 1023px) {
+            width: 25px;
+            height: 25px;
+            flex: 0 0 25px;
+            margin-right: 15px;
+        }
+    }
+    &__opt_info {
+        width: 100%;
+    }
+    &__t {
+        font-family: 'on', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        color: #888888;
+        @media all and (max-width: 1023px) {
+            font-size: 11px;
+        }
+    }
+    &__b {
+        font-family: 'on', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+        @media all and (max-width: 1023px) {
+            font-size: 13px;
+        }
     }
 }
 .card_top {
@@ -1663,6 +1779,17 @@ textarea {
         background: #fff url("data:image/svg+xml,%3Csvg width='531' height='480' viewBox='0 0 531 480' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M352.038 240H0L178.962 480H531L352.038 240Z' fill='%23F7FF14'/%3E%3Cpath d='M178.962 0H531L352.038 240H0L178.962 0Z' fill='%23F7FF14'/%3E%3C/svg%3E%0A") calc(100% - 107px) 50% / contain no-repeat;
         @media all and (max-width: 1380px) {
             width: 100%;
+        }
+        @media all and (max-width: 1023px) {
+            padding: 30px;
+            padding-top: 14px;
+        }
+        @media all and (max-width: 680px) {
+            padding: 20px;
+            padding-top: 14px;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
         }
     }
     &__r-side {
@@ -1862,6 +1989,106 @@ textarea {
                 bottom: -50px !important; 
                 max-width: 300px;
                 width: 100%;
+            }
+        }
+    }
+    &__colors {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        max-width: 170px;
+        width: 100%;
+        .slick-list {
+            overflow: unset;
+        }
+        .slick-track {
+            transform: unset !important;
+            display: flex;
+        }
+        @media all and (max-width: 1023px) {
+            max-width: 140px;
+        }
+    }
+    &__color {
+        cursor: pointer;
+        @media all and (max-width: 1023px) {
+            width: 22px !important;
+            height: 22px;
+            margin-right: 7px;
+        }
+        span {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            font-family: 'on', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            display: none;
+            pointer-events: none;
+            color: #000000;
+        }
+        div {
+            border-radius: 50%;
+            width: 27px;
+            border: 2px solid #F7F7F8;
+            height: 27px;
+            position: relative;
+            @media all and (max-width: 1023px) {
+                width: 22px;
+                height: 22px;
+            }
+        }
+        &:first-child {
+            span {
+                display: block;
+            }
+            div {
+                &:before {
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    right: -3px;
+                    background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23F7FF14'/%3E%3Cpath d='M3.69364 5.5019C3.29582 5.11881 2.66277 5.13076 2.27968 5.52858C1.89659 5.9264 1.90854 6.55945 2.30636 6.94254L3.69364 5.5019ZM4.84615 8L4.15251 8.72032C4.53976 9.09323 5.15255 9.09323 5.5398 8.72032L4.84615 8ZM9.69364 4.72032C10.0915 4.33723 10.1034 3.70418 9.72032 3.30636C9.33723 2.90854 8.70418 2.89659 8.30636 3.27968L9.69364 4.72032ZM2.30636 6.94254L4.15251 8.72032L5.5398 7.27968L3.69364 5.5019L2.30636 6.94254ZM5.5398 8.72032L9.69364 4.72032L8.30636 3.27968L4.15251 7.27968L5.5398 8.72032Z' fill='black'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                }
+            }
+        }
+        &:first-child.slick-active {
+            span {
+                display: none;
+            }
+            div {
+                &:before {
+                    display: none;
+                    width: 12px;
+                    height: 12px;
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    right: -3px;
+                    background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23F7FF14'/%3E%3Cpath d='M3.69364 5.5019C3.29582 5.11881 2.66277 5.13076 2.27968 5.52858C1.89659 5.9264 1.90854 6.55945 2.30636 6.94254L3.69364 5.5019ZM4.84615 8L4.15251 8.72032C4.53976 9.09323 5.15255 9.09323 5.5398 8.72032L4.84615 8ZM9.69364 4.72032C10.0915 4.33723 10.1034 3.70418 9.72032 3.30636C9.33723 2.90854 8.70418 2.89659 8.30636 3.27968L9.69364 4.72032ZM2.30636 6.94254L4.15251 8.72032L5.5398 7.27968L3.69364 5.5019L2.30636 6.94254ZM5.5398 8.72032L9.69364 4.72032L8.30636 3.27968L4.15251 7.27968L5.5398 8.72032Z' fill='black'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                }
+            }
+        }
+        &.slick-current.slick-active {
+            span {
+                display: block !important;
+            }
+            div {
+                &:before {
+                    display: block !important;
+                    width: 12px;
+                    height: 12px;
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    right: -3px;
+                    background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23F7FF14'/%3E%3Cpath d='M3.69364 5.5019C3.29582 5.11881 2.66277 5.13076 2.27968 5.52858C1.89659 5.9264 1.90854 6.55945 2.30636 6.94254L3.69364 5.5019ZM4.84615 8L4.15251 8.72032C4.53976 9.09323 5.15255 9.09323 5.5398 8.72032L4.84615 8ZM9.69364 4.72032C10.0915 4.33723 10.1034 3.70418 9.72032 3.30636C9.33723 2.90854 8.70418 2.89659 8.30636 3.27968L9.69364 4.72032ZM2.30636 6.94254L4.15251 8.72032L5.5398 7.27968L3.69364 5.5019L2.30636 6.94254ZM5.5398 8.72032L9.69364 4.72032L8.30636 3.27968L4.15251 7.27968L5.5398 8.72032Z' fill='black'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                }
             }
         }
     }
